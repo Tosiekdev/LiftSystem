@@ -1,0 +1,5 @@
+Check connection binding consistency Report
+
+ERROR:  controllerThread.moveOutput -> moveThread.input: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  liftThread.doorOutput -> doorsThread.input: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  liftThread.alarmOutput -> alarmThread.input: Hardware (processor or device) of connection source and destination are not physically connected by bus.

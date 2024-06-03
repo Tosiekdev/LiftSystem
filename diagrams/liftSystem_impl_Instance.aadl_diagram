@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="fae78512-f1c3-47c8-b13a-1c2fc80f9d3c" manual="true">
+    <element uuid="3055f686-aa84-491b-a87b-6e382b768f06" manual="true">
+      <element uuid="3b835bfe-1300-49a6-96e4-d07db66acbd2" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="d80c5d9e-ec44-4c16-a9ca-cbc2a12363b2" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>input</seg>
+        </bo>
+        <position y="64.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>alarm</seg>
+      </bo>
+      <position x="900.09326171875" y="42.0"/>
+      <size width="178.2400016784668" height="118.0"/>
+    </element>
+    <element uuid="4dec0d8c-f126-4cd7-babc-3b2b56b2a41c" manual="true">
+      <element uuid="bc1bb86c-f692-4941-87e6-24fe712511df" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>firstFloorInput</seg>
+        </bo>
+        <position y="118.0"/>
+      </element>
+      <element uuid="1e855c45-f7a8-4553-93fd-4b9a6674ac6f" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>firstFloorSensorInput</seg>
+        </bo>
+        <position y="226.0"/>
+      </element>
+      <element uuid="744b4e9b-32ff-4cc9-aa74-a46547e7872b" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>liftInput</seg>
+        </bo>
+        <position y="64.0"/>
+      </element>
+      <element uuid="d04df25a-d231-4e8e-8805-a27ba7e0a80a" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>liftOutput</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="3aa868f6-ba5f-4994-8281-c7716f978f06" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>moveOutput</seg>
+        </bo>
+        <position x="360.5333480834961" y="145.0"/>
+      </element>
+      <element uuid="9cb4bb55-289f-4963-b710-5f1883e68ac8" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>secondFloorInput</seg>
+        </bo>
+        <position y="280.0"/>
+      </element>
+      <element uuid="691d87e6-d6c1-46b4-befc-118ca68071fe" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>secondFloorSensorInput</seg>
+        </bo>
+        <position y="172.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>controller</seg>
+      </bo>
+      <position x="900.09326171875" y="792.0"/>
+      <size width="452.0800018310547" height="334.0"/>
+    </element>
+    <element uuid="9c49c7b9-3d26-4d44-ba74-b1075480a52d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>controllerBus</seg>
+      </bo>
+      <position x="330.41331481933594" y="930.0"/>
+      <size width="136.29332733154297" height="70.0"/>
+    </element>
+    <element uuid="79bdc8c7-1d4a-4cde-a56a-b8d7bcfe993c" manual="true">
+      <element uuid="5f464da9-4031-4712-b4fb-bc6bfd3724ec" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="64.0"/>
+      </element>
+      <element uuid="f19eab86-6b1c-42f6-8721-368675583f2d" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth1</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="92925faa-466d-4d3b-becf-3ebc1abaf5f7" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>mem</seg>
+        </bo>
+        <position y="118.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>controllerCpu</seg>
+      </bo>
+      <position x="516.7066345214844" y="870.0"/>
+      <size width="226.77332305908203" height="172.0"/>
+    </element>
+    <element uuid="83faf3d8-5f20-4eeb-9ac3-85de5a2533a8" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>controllerMemoryBus</seg>
+      </bo>
+      <position x="277.95996856689453" y="1163.0"/>
+      <size width="188.74667358398438" height="40.0"/>
+    </element>
+    <element uuid="f571d8f9-fdf7-4037-81f5-70b0c1888ee7" manual="true">
+      <element uuid="7511bbf1-4444-4e7c-9109-31841ad0ea60" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>mem</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>controllerRAM</seg>
+      </bo>
+      <position x="516.7066345214844" y="1147.0"/>
+      <size width="230.8133316040039" height="64.0"/>
+    </element>
+    <element uuid="08d26c25-1d0b-48a7-bbdb-1660f0b2003d" manual="true">
+      <element uuid="6968f947-9d7e-485f-a7a1-ed753b527167" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="7c5a701b-b5bc-4df1-b0f8-dacc98c42a58" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>input</seg>
+        </bo>
+        <position y="64.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>doorOpener</seg>
+      </bo>
+      <position x="900.09326171875" y="180.0"/>
+      <size width="219.1066665649414" height="118.0"/>
+    </element>
+    <element uuid="a3b6fba8-5fba-4d6b-8528-d327a80d130b" manual="true">
+      <element uuid="76cbaca6-6706-4612-b0b2-0db545bd058a" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="cb68cb7a-4ef0-4008-bbb5-dd10c60577cb" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>output</seg>
+        </bo>
+        <position x="205.94664764404297" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>firstFloorButton</seg>
+      </bo>
+      <position x="548.2399616241455" y="618.0"/>
+      <size width="260.3199768066406" height="64.0"/>
+    </element>
+    <element uuid="f5dc4857-19d9-4ed9-80b9-11dd30bcdfa7" manual="true">
+      <element uuid="90ec03c1-ad9a-4f9e-b3c5-24cffa51be2a" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="5c835db3-3c1f-4b6a-bcc5-e6174745c76a" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>output</seg>
+        </bo>
+        <position x="206.1466522216797" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>firstFloorSensor</seg>
+      </bo>
+      <position x="548.1399593353271" y="786.0"/>
+      <size width="260.51998138427734" height="64.0"/>
+    </element>
+    <element uuid="62a5ac90-bb55-4111-90f3-58b2c93b5421" manual="true">
+      <element uuid="05504e77-0c17-4dcf-9d27-c47121b0e825" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>alarmOutput</seg>
+        </bo>
+        <position x="230.29330825805664" y="10.0"/>
+      </element>
+      <element uuid="14d2b513-8dde-4ba2-a1f4-f5abdc719ca5" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>controlInput</seg>
+        </bo>
+        <position x="232.83996963500977" y="118.0"/>
+      </element>
+      <element uuid="54faa668-0477-4176-a080-553c41cb40d4" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>controlOutput</seg>
+        </bo>
+        <position x="222.13330459594727" y="172.0"/>
+      </element>
+      <element uuid="5d80f8f1-7570-4308-a642-4f89b459a575" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>doorOutput</seg>
+        </bo>
+        <position x="236.82663345336914" y="64.0"/>
+      </element>
+      <element uuid="93f1c119-42a6-4eb4-948a-2fa12e45b086" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>moveSensorInput</seg>
+        </bo>
+        <position y="136.0"/>
+      </element>
+      <element uuid="e3a9b505-3ced-4692-933b-0bbf7e6e894b" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>userInput</seg>
+        </bo>
+        <position y="46.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>lift</seg>
+      </bo>
+      <position x="516.7066345214844" y="180.0"/>
+      <size width="323.3866310119629" height="226.0"/>
+    </element>
+    <element uuid="f47c52c7-d2cd-4dad-92a8-cd1976d08a71" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>liftBus</seg>
+      </bo>
+      <position x="106.5199966430664" y="232.0"/>
+      <size width="91.57333374023438" height="60.0"/>
+    </element>
+    <element uuid="4c8bdc7f-78cb-4eb1-b333-2ba05afba3c5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>liftControllerBus</seg>
+      </bo>
+      <position x="312.10665130615234" y="568.3333333333334"/>
+      <size width="154.59999084472656" height="35.0"/>
+    </element>
+    <element uuid="24ec4772-80b6-4d99-b04b-269574da8c7f" manual="true">
+      <element uuid="2bea20ff-3f1a-4147-9dfe-e292b719f1ea" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="b9d4f0a8-b687-4ff2-9625-be297d138578" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth1</seg>
+        </bo>
+        <position y="118.0"/>
+      </element>
+      <element uuid="fa132422-993f-4e94-a377-21a9f213e2de" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>mem</seg>
+        </bo>
+        <position y="64.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>liftCPU</seg>
+      </bo>
+      <position x="516.7066345214844" y="426.0"/>
+      <size width="183.42666244506836" height="172.0"/>
+    </element>
+    <element uuid="3f637909-5fd1-4e0f-9178-59f12771ece9" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>liftMemoryBus</seg>
+      </bo>
+      <position x="259.62220764160156" y="508.5"/>
+      <size width="144.02666473388672" height="35.0"/>
+    </element>
+    <element uuid="84a9d7c7-13f4-4545-85b0-ff9cd2f5622a" manual="true">
+      <element uuid="dceb3258-9193-4cd2-b589-08931078827a" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>mem</seg>
+        </bo>
+        <position x="141.63999938964844" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>liftRAM</seg>
+      </bo>
+      <position x="12.0" y="485.83333333333337"/>
+      <size width="186.09333038330078" height="64.0"/>
+    </element>
+    <element uuid="502a795f-2ed2-4624-a0f8-08688ca9199e" manual="true">
+      <element uuid="f47696fe-dcfc-4aa6-9314-9f98e92e04d3" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="64.0"/>
+      </element>
+      <element uuid="0d077859-d323-4ace-8843-a54adbe3ca9c" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>input</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>mover</seg>
+      </bo>
+      <position x="1372.1732177734375" y="1036.0"/>
+      <size width="182.20000076293945" height="118.0"/>
+    </element>
+    <element uuid="a4ad2a49-f330-44e4-9088-b1750dce524d" manual="true">
+      <element uuid="dc778154-e83a-405c-8eb9-0c1e521e4150" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="85d766b9-0697-4c23-ba97-1697c3740b48" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>output</seg>
+        </bo>
+        <position x="184.239990234375" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>moveSensor</seg>
+      </bo>
+      <position x="228.09332275390625" y="306.0"/>
+      <size width="238.61331939697266" height="64.0"/>
+    </element>
+    <element uuid="e35b2aa0-ad7e-4c07-ae51-c6dc276cdd23" manual="true">
+      <element uuid="4890f818-fb53-4cf6-a908-2cee81fe709e" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="89c816b2-0c16-49da-9596-ec840c340b7e" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>output</seg>
+        </bo>
+        <position x="141.2533302307129" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>panel</seg>
+      </bo>
+      <position x="249.5866527557373" y="216.0"/>
+      <size width="195.62665939331055" height="64.0"/>
+    </element>
+    <element uuid="240e53dc-6f6a-493b-806f-639409219fa1" manual="true">
+      <element uuid="12716469-a990-4373-ac80-fcc8ef6deffa" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="a520b77d-4ae9-4443-a221-4e44825b2b18" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>output</seg>
+        </bo>
+        <position x="226.0266571044922" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>secondFloorButton</seg>
+      </bo>
+      <position x="538.1999568939209" y="1062.0"/>
+      <size width="280.39998626708984" height="64.0"/>
+    </element>
+    <element uuid="2a36ed1d-911b-4a4a-b9fe-d9e7595646d1" manual="true">
+      <element uuid="cb07cf65-706b-4804-b3c7-742b4f17307c" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="3b87e2e2-cff4-4ed6-88a4-e4f54b24120d" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>output</seg>
+        </bo>
+        <position x="226.2266616821289" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>secondFloorSensor</seg>
+      </bo>
+      <position x="538.0999546051025" y="702.0"/>
+      <size width="280.59999084472656" height="64.0"/>
+    </element>
+    <element uuid="79510c38-1cd3-4abb-bfba-36e28da11edb" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controller.liftOutput -> liftSystem_impl_Instance.lift.controlInput</seg>
+      </bo>
+      <bendpoints>
+        <point x="890.09326171875" y="838.0"/>
+        <point x="890.09326171875" y="334.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="389ea030-705a-44d8-ad23-7628b0512210" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controller.moveOutput -> liftSystem_impl_Instance.mover.input</seg>
+      </bo>
+      <bendpoints>
+        <point x="1362.1732177734375" y="973.0"/>
+        <point x="1362.1732177734375" y="1082.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="821673ca-7329-4b67-8957-a982b658fb17" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controllerBus -> liftSystem_impl_Instance.controllerCpu.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="466.7066345214844" y="970.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d0033c83-bbaa-4736-8250-fdc3104e53fd" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controllerBus -> liftSystem_impl_Instance.firstFloorButton.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="470.7066345214844" y="940.0"/>
+        <point x="476.7066345214844" y="940.0"/>
+        <point x="476.7066345214844" y="664.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="9c60cdd9-f0b7-4e0d-93d0-a91239ea47e2" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controllerBus -> liftSystem_impl_Instance.firstFloorSensor.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="470.7066345214844" y="960.0"/>
+        <point x="496.7066345214844" y="960.0"/>
+        <point x="496.7066345214844" y="832.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="1ad8f503-2311-464c-8f69-5d16be20c5d6" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controllerBus -> liftSystem_impl_Instance.mover.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="470.7066345214844" y="990.0"/>
+        <point x="476.7066345214844" y="990.0"/>
+        <point x="476.7066345214844" y="1136.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="5e9c447a-caff-49b5-8e11-db0aaefec47f" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controllerBus -> liftSystem_impl_Instance.secondFloorButton.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="470.7066345214844" y="980.0"/>
+        <point x="496.7066345214844" y="980.0"/>
+        <point x="496.7066345214844" y="1108.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="294b56ff-53e9-4bb5-9311-3e4fec61c16c" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controllerBus -> liftSystem_impl_Instance.secondFloorSensor.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="470.7066345214844" y="950.0"/>
+        <point x="486.7066345214844" y="950.0"/>
+        <point x="486.7066345214844" y="748.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="23318587-b956-43c4-a7a9-995d442d8b7f" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controllerMemoryBus -> liftSystem_impl_Instance.controllerCpu.mem</seg>
+      </bo>
+      <bendpoints>
+        <point x="470.7066345214844" y="1173.0"/>
+        <point x="486.7066345214844" y="1173.0"/>
+        <point x="486.7066345214844" y="1024.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c0266439-5cab-4dd1-93cf-0f212e64c9a7" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controllerMemoryBus -> liftSystem_impl_Instance.controllerRAM.mem</seg>
+      </bo>
+      <bendpoints>
+        <point x="466.7066345214844" y="1193.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="97663267-9368-41e1-a167-0e9ab38b5887" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.controllerRAM.mem -> liftSystem_impl_Instance.controllerMemoryBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="476.7066345214844" y="1193.0"/>
+        <point x="476.7066345214844" y="1183.0"/>
+        <point x="470.7066345214844" y="1183.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a9e52798-fe51-4de7-9dfc-50067f4105ef" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.firstFloorButton.output -> liftSystem_impl_Instance.controller.firstFloorInput</seg>
+      </bo>
+      <bendpoints>
+        <point x="870.09326171875" y="664.0"/>
+        <point x="870.09326171875" y="946.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d103c28f-090d-4049-802e-5af2c62b7059" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.firstFloorSensor.output -> liftSystem_impl_Instance.controller.firstFloorSensorInput</seg>
+      </bo>
+      <bendpoints>
+        <point x="850.09326171875" y="832.0"/>
+        <point x="850.09326171875" y="1054.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="ca58f8fc-93a2-4894-a74e-fc2e3faad636" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.lift.alarmOutput -> liftSystem_impl_Instance.alarm.input</seg>
+      </bo>
+      <bendpoints>
+        <point x="850.09326171875" y="226.0"/>
+        <point x="850.09326171875" y="142.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="aae0f57d-1742-42b4-930f-0bf39bc9f0b4" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.lift.controlOutput -> liftSystem_impl_Instance.controller.liftInput</seg>
+      </bo>
+      <bendpoints>
+        <point x="880.09326171875" y="388.0"/>
+        <point x="880.09326171875" y="892.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="f5dcc385-2223-4034-9655-47e1d3a77f05" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.lift.doorOutput -> liftSystem_impl_Instance.doorOpener.input</seg>
+      </bo>
+    </element>
+    <element uuid="d82553d1-efab-45cf-92f1-2758f44761e7" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.liftBus -> liftSystem_impl_Instance.alarm.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="202.09332275390625" y="242.0"/>
+        <point x="208.09332275390625" y="242.0"/>
+        <point x="208.09332275390625" y="88.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="73501067-1dd9-40ba-801e-b0f6ce53b8c5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.liftBus -> liftSystem_impl_Instance.doorOpener.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="202.09332275390625" y="252.0"/>
+        <point x="218.09332275390625" y="252.0"/>
+        <point x="218.09332275390625" y="169.0"/>
+        <point x="860.09326171875" y="169.0"/>
+        <point x="860.09326171875" y="226.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="86541178-ab9f-4731-b0d5-e651395379ed" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.liftBus -> liftSystem_impl_Instance.liftCPU.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="202.09332275390625" y="282.0"/>
+        <point x="208.09332275390625" y="282.0"/>
+        <point x="208.09332275390625" y="472.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="e239244d-4af7-4fd4-8605-606255d45d82" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.liftBus -> liftSystem_impl_Instance.moveSensor.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="202.09332275390625" y="272.0"/>
+        <point x="218.09332275390625" y="272.0"/>
+        <point x="218.09332275390625" y="352.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="55565149-13df-4f02-a690-4adfca84d9fe" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.liftBus -> liftSystem_impl_Instance.panel.eth</seg>
+      </bo>
+      <bendpoints>
+        <point x="198.09332275390625" y="262.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="2dacbeb1-31e4-4c16-83a1-f3d669e045c5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.liftControllerBus -> liftSystem_impl_Instance.controllerCpu.eth1</seg>
+      </bo>
+      <bendpoints>
+        <point x="470.7066345214844" y="591.6666870117188"/>
+        <point x="506.7066345214844" y="591.6666870117188"/>
+        <point x="506.7066345214844" y="916.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="1870eebb-e803-44dc-b92d-e82514bd1a02" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.liftControllerBus -> liftSystem_impl_Instance.liftCPU.eth1</seg>
+      </bo>
+      <bendpoints>
+        <point x="466.7066345214844" y="580.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="f74cab79-78d0-48fc-aee7-73e216f4c107" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.liftMemoryBus -> liftSystem_impl_Instance.liftCPU.mem</seg>
+      </bo>
+      <bendpoints>
+        <point x="403.64886474609375" y="526.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="ba290a94-c615-40c1-88c6-caa7892d002c" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.liftMemoryBus -> liftSystem_impl_Instance.liftRAM.mem</seg>
+      </bo>
+      <bendpoints>
+        <point x="259.6221923828125" y="531.8333129882812"/>
+      </bendpoints>
+    </element>
+    <element uuid="e632cf64-bb64-44ea-8f15-121726b4470f" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.liftRAM.mem -> liftSystem_impl_Instance.liftMemoryBus</seg>
+      </bo>
+      <bendpoints>
+        <point x="208.09332275390625" y="531.8333129882812"/>
+        <point x="208.09332275390625" y="520.1666870117188"/>
+        <point x="255.62220764160156" y="520.1666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="52798091-65c2-47bc-9455-466bee0f8095" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.moveSensor.output -> liftSystem_impl_Instance.lift.moveSensorInput</seg>
+      </bo>
+    </element>
+    <element uuid="407998a8-121f-4da6-98a2-860ad5ff575e" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.panel.output -> liftSystem_impl_Instance.lift.userInput</seg>
+      </bo>
+    </element>
+    <element uuid="b9d4ff6f-1034-4d87-a6d3-b5f82127be4f" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.secondFloorButton.output -> liftSystem_impl_Instance.controller.secondFloorInput</seg>
+      </bo>
+    </element>
+    <element uuid="09eaefeb-f729-4d50-9537-39dcd8afab6a" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg> : liftSystem_impl_Instance.secondFloorSensor.output -> liftSystem_impl_Instance.controller.secondFloorSensorInput</seg>
+      </bo>
+      <bendpoints>
+        <point x="860.09326171875" y="748.0"/>
+        <point x="860.09326171875" y="1000.0"/>
+      </bendpoints>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/lift/instances/lift_liftsystem_impl_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="1566.3731689453125" height="1223.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/lift/instances/lift_liftsystem_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

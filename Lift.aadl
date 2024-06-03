@@ -1,0 +1,299 @@
+package Lift
+public
+	with Base_Types;
+	with Data_Model;
+	
+-- DATA - OrderType
+	data UserOrderType
+     	properties
+       		Data_Model::Data_Representation => Integer;
+  	end UserOrderType;
+  
+-- DATA - MoveOrder
+	data MoveOrder
+     	properties
+       		Data_Model::Data_Representation => Integer;
+  	end MoveOrder;
+  	
+-- DATA - DoorOrder
+	data DoorOrder
+		properties
+       		Data_Model::Data_Representation => Integer;
+	end DoorOrder;
+	
+-- DATA - Order
+	data Order
+		properties
+       		Data_Model::Data_Representation => Integer;
+	end Order;
+	
+-- DATA - Info
+	data Info
+		properties
+       		Data_Model::Data_Representation => Integer;
+	end Info;
+	
+-- DEVICE - ControlPanel
+	device ControlPanel
+		features
+			output: out data port UserOrderType;
+			eth: requires bus access ethernet;
+	end ControlPanel;
+	
+-- DEVICE - Beeper
+	device Beeper
+		features
+			input: in data port Base_Types::boolean;
+			eth: requires bus access ethernet;
+	end Beeper;
+	
+-- DEVICE - SummonButton
+	device SummonButton
+		features
+			output: out data port Base_Types::boolean;
+			eth: requires bus access ethernet;
+	end SummonButton;
+
+-- DEVICE - MoveSensor
+	device MoveSensor
+		features
+			output: out data port Base_Types::boolean;
+			eth: requires bus access ethernet;
+	end MoveSensor;
+
+-- DEVICE - FloorSensor
+	device FloorSensor
+		features
+			output: out data port Base_Types::boolean;
+			eth: requires bus access ethernet;
+	end FloorSensor;
+	
+-- DEVICE - LiftMover
+	device LiftMover
+		features
+			input: in data port MoveOrder;
+			eth: requires bus access ethernet;
+	end LiftMover;
+	
+-- DEVICE - DoorController
+	device DoorController
+		features
+			input: in data port DoorOrder;
+			eth: requires bus access ethernet;
+	end DoorController;
+	
+-- BUS - ethernet
+	bus ethernet
+	end ethernet;
+	
+-- BUS - marine
+	bus FSB
+	end FSB;
+	
+-- PROCESSOR - CPU
+	processor CPU
+		features
+			eth: requires bus access ethernet;
+			eth1: requires bus access ethernet;
+			mem: requires bus access FSB;
+		properties
+   			Scheduling_Protocol => (Round_Robin_Protocol);
+   			Clock_Period => 1 ms;	
+	end CPU;
+	
+-- MEMORY - RAM
+	memory RAM
+		features
+			mem: requires bus access FSB;
+	end RAM;
+	
+-- THREAD - alarmThr
+	thread alarmThr
+		features
+			input: in data port Base_Types::boolean;
+			output: out data port Base_Types::boolean;
+	end alarmThr;
+
+-- THREAD - doorThr
+	thread doorThr
+		features
+			input: in data port Base_Types::boolean;
+			output: out data port DoorOrder;
+	end doorThr;
+
+-- THREAD - moveThr
+	thread moveThr
+		features
+			input: in data port Base_Types::integer;
+			output: out data port MoveOrder;
+	end moveThr;
+
+-- THREAD - liftThr
+	thread liftThr
+		features
+			userInput: in data port UserOrderType;
+			moveSensorInput: in data port Base_Types::boolean;
+			doorOutput: out data port Base_Types::boolean;
+			controlInput: in data port Order;
+			controlOutput: out data port Info;
+			alarmOutput: out data port Base_Types::boolean;
+	end liftThr;
+	
+-- PROCESS - liftProcess
+	process liftProcess
+		features
+			userInput: in data port UserOrderType;
+			moveSensorInput: in data port Base_Types::boolean;
+			doorOutput: out data port DoorOrder;
+			controlInput: in data port Order;
+			controlOutput: out data port Info;
+			alarmOutput: out data port Base_Types::boolean;
+	end liftProcess;
+	
+	process implementation liftProcess.impl
+		subcomponents
+			liftThread: thread liftThr;
+			doorsThread: thread doorThr;
+			alarmThread: thread alarmThr;
+		connections
+			userInputConn: port userInput -> liftThread.userInput;
+			moveSensorInputConn: port moveSensorInput -> liftThread.moveSensorInput;
+			controlInputConn: port controlInput -> liftThread.controlInput;
+			controlOutputConn: port liftThread.controlOutput -> controlOutput;
+			doorConn: port liftThread.doorOutput -> doorsThread.input;
+			doorOutputConn: port doorsThread.output -> doorOutput;
+			alarmConn: port liftThread.alarmOutput -> alarmThread.input;
+			alarmOutputConn: port alarmThread.output -> alarmOutput;
+	end liftProcess.impl;
+	
+-- THREAD - controllerThr
+	thread controllerThr
+		features
+			liftInput: in data port Info;
+			liftOutput: out data port Order;
+			firstFloorInput: in data port Base_Types::boolean;
+			secondFloorInput: in data port Base_Types::boolean;
+			firstFloorSensorInput: in data port Base_Types::boolean;
+			secondFloorSensorInput: in data port Base_Types::boolean;
+			moveOutput: out data port Base_Types::integer;
+	end controllerThr;
+
+-- PROCESS controllerProcess
+	process controllerProcess
+		features
+			liftInput: in data port Info;
+			liftOutput: out data port Order;
+			firstFloorInput: in data port Base_Types::boolean;
+			secondFloorInput: in data port Base_Types::boolean;
+			firstFloorSensorInput: in data port Base_Types::boolean;
+			secondFloorSensorInput: in data port Base_Types::boolean;
+			moveOutput: out data port MoveOrder;
+	end controllerProcess;
+	
+	process implementation controllerProcess.impl
+		subcomponents
+			controllerThread: thread controllerThr;
+			moveThread: thread moveThr;
+		connections
+			liftInputConn: port liftInput -> controllerThread.liftInput;
+			liftOutputConn: port controllerThread.liftOutput -> liftOutput;
+			firstFloorInputConn: port firstFloorInput -> controllerThread.firstFloorInput;
+			secondFloorInputConn: port secondFloorInput -> controllerThread.secondFloorInput;
+			firstFloorSensorInputConn: port firstFloorSensorInput -> controllerThread.firstFloorSensorInput;
+			secondFloorSensorInputConn: port secondFloorSensorInput -> controllerThread.secondFloorSensorInput;
+			moveConn: port controllerThread.moveOutput -> moveThread.input;
+			moveOutputConn: port moveThread.output -> moveOutput;
+	end controllerProcess.impl;
+	
+-- SYSTEM - liftSystem
+	system liftSystem
+	end liftSystem;
+	
+	system implementation liftSystem.impl
+		subcomponents
+			-- processes
+			controller: process controllerProcess.impl;
+			lift: process liftProcess.impl;
+			-- controller cpu and ram
+			controllerCpu: processor CPU;
+			controllerRAM: memory RAM;
+			controllerMemoryBus: bus FSB;
+			-- lift cpu and ram
+			liftCPU: processor CPU;
+			liftRAM: memory RAM;
+			liftMemoryBus: bus FSB;
+			-- buses
+			liftControllerBus: bus ethernet;
+			liftBus: bus ethernet;
+			controllerBus: bus ethernet;
+			-- lift devices
+			panel: device ControlPanel;
+			alarm: device Beeper;
+			moveSensor: device MoveSensor;
+			doorOpener: device DoorController;
+			-- controller devices
+			firstFloorButton: device SummonButton;
+			secondFloorButton: device SummonButton;
+			firstFloorSensor: device FloorSensor;
+			secondFloorSensor: device FloorSensor;
+			mover: device LiftMover;
+		connections
+			-- bus between lift and controller
+			liftBetween: bus access liftControllerBus -> liftCPU.eth1;
+			controllerBetween: bus access  liftControllerBus -> controllerCpu.eth1;
+			-- memory bus access
+			busMemoryControllerCpu: bus access controllerMemoryBus -> controllerCpu.mem;
+			busMemoryController: bus access controllerMemoryBus <-> controllerRAM.mem;
+			busMemoryLiftCpu: bus access liftMemoryBus -> liftCPU.mem;
+			busMemoryLift: bus access liftMemoryBus <-> liftRAM.mem;
+			-- bus access in lift
+			liftEth: bus access liftBus -> liftCPU.eth;
+			panelEth: bus access liftBus -> panel.eth;
+			alarmEth: bus access liftBus -> alarm.eth;
+			moveEth: bus access liftBus -> moveSensor.eth;
+			doorEth: bus access liftBus -> doorOpener.eth;
+			-- bus access in controller
+			controllerEth: bus access controllerBus -> controllerCpu.eth;
+			buttonEth1: bus access controllerBus -> firstFloorButton.eth;
+			buttonEth2: bus access controllerBus -> secondFloorButton.eth;
+			floorEth1: bus access controllerBus -> firstFloorSensor.eth;
+			floorEth2: bus access controllerBus -> secondFloorSensor.eth;
+			moverEth: bus access controllerBus -> mover.eth;
+			-- connections inside the lift
+			userConn: port panel.output -> lift.userInput;
+			alarmConn: port lift.alarmOutput -> alarm.input;
+			doorSensorConn: port moveSensor.output -> lift.moveSensorInput;
+			doorConn: port lift.doorOutput -> doorOpener.input;
+			-- connections between lift and controller
+			controllerLiftConn: port controller.liftOutput -> lift.controlInput;
+			liftControllerConn: port lift.controlOutput -> controller.liftInput;
+			-- connections related to controller
+			floorSensorConn1: port firstFloorSensor.output -> controller.firstFloorSensorInput;
+			floorSensorConn2: port secondFloorSensor.output -> controller.secondFloorSensorInput;
+			buttonConn1: port firstFloorButton.output -> controller.firstFloorInput;
+			buttonConn2: port secondFloorButton.output -> controller.secondFloorInput;
+			moverConn: port controller.moveOutput ->mover.input;
+		properties
+			-- CPU bindings
+			Actual_Processor_Binding => (reference(liftCPU))  applies to lift;
+			Actual_Processor_Binding => (reference(controllerCPU)) applies to controller;
+			-- memory bindings
+			Actual_Memory_Binding => (reference(liftRAM)) applies to lift;
+			Actual_Memory_Binding => (reference(controllerRAM)) applies to controller;
+			-- lift-controller connections bindings
+			Actual_Connection_Binding => (reference(liftControllerBus)) applies to liftBetween;
+			Actual_Connection_Binding => (reference(liftControllerBus)) applies to controllerBetween;
+			-- lift connections bindings
+			Actual_Connection_Binding => (reference(liftBus)) applies to userConn;
+			Actual_Connection_Binding => (reference(liftBus)) applies to alarmConn;
+			Actual_Connection_Binding => (reference(liftBus)) applies to doorSensorConn;
+			Actual_Connection_Binding => (reference(liftBus)) applies to doorConn;
+			-- controller connections bindings
+			Actual_Connection_Binding => (reference(controllerBus)) applies to floorSensorConn1;
+			Actual_Connection_Binding => (reference(controllerBus)) applies to floorSensorConn2;
+			Actual_Connection_Binding => (reference(controllerBus)) applies to buttonConn1;
+			Actual_Connection_Binding => (reference(controllerBus)) applies to buttonConn2;
+			Actual_Connection_Binding => (reference(controllerBus)) applies to moverConn;
+	end liftSystem.impl;
+	
+end Lift;
